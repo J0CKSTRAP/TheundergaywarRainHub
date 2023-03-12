@@ -277,4 +277,7 @@ while true do
 	
 end
 end)
-
+--sec:Colorpicker(title <string>, default <color3>, flag <string>, callback <function>)
+sec:Colorpicker("Colorpicker", Color3.fromRGB(255,255,255),"Colorpicker", function(t)
+  win.Color = Color3.fromRGB(t,t,t)
+end)
