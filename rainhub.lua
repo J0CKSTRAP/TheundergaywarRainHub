@@ -170,10 +170,23 @@ end)
 local tab = win:Tab("Other")
 
 --tab:Section(title <string>)
-local sec = tab:Section("Other")
+local sec = tab:Section("Other")--sec:Colorpicker(title <string>, default <color3>, flag <string>, callback <function>)
 sec:Colorpicker("Colorpicker", Color3.fromRGB(255,255,255),"Colorpicker", function(t)
 	win.Color = Color3.fromRGB(t,t,t)
-  end)  
+  end)
+sec:Button("ESP", function()
+	local players = game.Players:GetPlayers()
+
+	for i,v in pairs(players) do
+	 local esp = Instance.new("Highlight")
+	 esp.Name = v.Name
+	 esp.FillTransparency = 0
+	 esp.FillColor = Color3.new(t)
+	 esp.OutlineColor = Color3.new(t)
+	 esp.OutlineTransparency = 0
+	 esp.Parent = v.Character
+	end
+end)
 --sec:Button(title <string>, callback <function>)
 sec:Button("Rainbow Character {NOT FE}", function()
   SolarisLib:Notification("Rainbow Character {NOT FE}", "Gay")
@@ -280,4 +293,4 @@ while true do
 	
 end
 end)
---sec:Colorpicker(title <string>, default <color3>, flag <string>, callback <function>)
+
