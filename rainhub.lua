@@ -179,19 +179,12 @@ sec:Button("ESP", function()
 	 local esp = Instance.new("Highlight")
 	 esp.Name = v.Name
 	 esp.FillTransparency = 0
-	 esp.FillColor = Color3.new(t)
-	 esp.OutlineColor = Color3.new(t)
+	 esp.FillColor = Color3.new(255,255,255)
+	 esp.OutlineColor = Color3.new(255,255,255)
 	 esp.OutlineTransparency = 0
 	 esp.Parent = v.Character
 	end
 end)
---sec:Colorpicker(title <string>, default <color3>, flag <string>, callback <function>)
-sec:Colorpicker("ESP FillColor", Color3.fromRGB(255,255,255),"Colorpicker", function(t)
-	esp.FillColor = Color3.fromRGB(t)
-  end)
-  sec:Colorpicker("ESP OutlineColor", Color3.fromRGB(255,255,255),"Colorpicker", function(t)
-	esp.OutlineColor = Color3.fromRGB(t)
-  end)
 --sec:Button(title <string>, callback <function>)
 sec:Button("Rainbow Character {NOT FE}", function()
   SolarisLib:Notification("Rainbow Character {NOT FE}", "Gay")
