@@ -171,6 +171,9 @@ local tab = win:Tab("Other")
 
 --tab:Section(title <string>)
 local sec = tab:Section("Other")
+sec:Colorpicker("Colorpicker", Color3.fromRGB(255,255,255),"Colorpicker", function(t)
+	win.Color = Color3.fromRGB(t,t,t)
+  end)  
 --sec:Button(title <string>, callback <function>)
 sec:Button("Rainbow Character {NOT FE}", function()
   SolarisLib:Notification("Rainbow Character {NOT FE}", "Gay")
@@ -278,6 +281,3 @@ while true do
 end
 end)
 --sec:Colorpicker(title <string>, default <color3>, flag <string>, callback <function>)
-sec:Colorpicker("Colorpicker", Color3.fromRGB(255,255,255),"Colorpicker", function(t)
-  win.Color = Color3.fromRGB(t,t,t)
-end)
